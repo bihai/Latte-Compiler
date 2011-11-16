@@ -8,6 +8,10 @@ public class MethodSymbol extends Symbol implements Scope {
 	Map<String, Symbol> symbols = new HashMap<String, Symbol>();
 	Scope parentScope;
 	
+	public MethodSymbol(String name){
+		super(name);
+	}
+	
 	public MethodSymbol(String name, Type type, Scope parentScope) {
 		super(name, type);
 		this.parentScope = parentScope;
@@ -37,6 +41,10 @@ public class MethodSymbol extends Symbol implements Scope {
 			symbol = parentScope.resolve(name);
 		}
 		return symbol;
+	}
+
+	public void setParentScope(Scope parentScope) {
+		this.parentScope = parentScope;
 	}
 
 }

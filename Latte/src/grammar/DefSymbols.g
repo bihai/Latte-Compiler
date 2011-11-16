@@ -34,8 +34,9 @@ bottomup
 	: exit_scope
 	| exit_method
 	//| method_call
-	| expression_statement
+	//| expression_statement
 	| if_statement
+	| assign_statement
 	;
 
 enter_scope
@@ -51,11 +52,19 @@ exit_scope
 enter_method
 	: ^(FUNC NAME type arguments_list? .*) {
 		Type funcType = $type.type;
-		MethodSymbol method = new MethodSymbol($NAME.text, funcType, currentScope);
-		$NAME.setSymbol(method);
-		currentScope.define(method);
-		currentScope = method;
-		currentMethod = method;
+		MethodSymbol method = (MethodSymbol)currentScope.resolve($NAME.text);
+		if(method.getType() == null){
+			method.setType(funcType);
+			method.setParentScope(currentScope);
+			currentScope.define(method);
+			currentScope = method;
+			currentMethod = method;
+			$NAME.setSymbol(method);
+		}
+		else{
+			//TODO: Throw exception: function already defined
+		}
+
 	}
 	;
 	
@@ -138,17 +147,27 @@ expression_statement
   ;
   
 expression returns[Type type]
- :  INTEGER {$type = (Type)currentScope.resolve("int");}
- |  STRING  {$type = (Type)currentScope.resolve("string");}
- |  BOOLEAN  {$type = (Type)currentScope.resolve("boolean");}
- | binary_operator
+ :  INTEGER {$type = (Type)currentScope.resolve("int"); System.out.println("Integer found");}
+ |  STRING  {$type = (Type)currentScope.resolve("string"); System.out.println("String found");}
+ |  BOOLEAN  {$type = (Type)currentScope.resolve("boolean"); System.out.println("Bool found");}
+ |	binary_operator {$type = null;}
+ |	variable_call
+ |	method_call
+ |	negation
  ;
  
-binary_operator
+binary_operator returns[Type type]
+	@after{$start.evalType = $type;}
 	:
- // : ^(relativeOp expression_statement expression_statement)
-//  | equalityOp expression_statement expression_statement
-//  | numericOp expression_statement expression_statement
+	(	^(numericOp exp1 = expression exp2 = expression)
+			{$type = symbolTable.checkTypeNumOp($exp1.type, $exp2.type); }
+	|	^(relativeOp exp1 = expression exp2 = expression )
+			{$type = symbolTable.checkTypeNumOp($exp1.type, $exp2.type); }
+  | ^(equalityOp exp1 = expression exp2 = expression) 
+  		{$type = symbolTable.checkTypeEqOp($exp1.type, $exp2.type); }
+  | ^(logicalOp exp1 = expression exp2 = expression) 
+  		{$type = symbolTable.checkTypeBoolOp($exp1.type, $exp2.type); }
+  )
   ; 
 
 relativeOp
@@ -165,14 +184,29 @@ relativeOp
 numericOp
   : PLUS | MINUS | TIMES | DIV | MOD
   ;  
+  
+ logicalOp
+ 	: '&&' | '||' 
+ 	;
+  
+negation
+	: ^(NEGATION expression) {System.out.println("Bool Negation found");}
+  | ^(NUM_NEGATION expression) {System.out.println("Num Negation found");}
+	;
 
 // STATEMENTS
 
 if_statement
-  : ^(IF expression_statement .){
-  System.out.println("Found IF");}
-  | ^(IF expression_statement . .){
-  System.out.println("Found IF ELSE");}
+  : ^(IF expression_statement .*){
+  	System.out.println("Found IF");
+  	if($IF.getChildCount() == 3){
+  		System.out.println("Found ELSE");
+  	}
+  }
+//  | ^(IF . . .){
+//  System.out.println("Found IF ELSE");}
   ;
   
- 
+assign_statement
+	:
+	;

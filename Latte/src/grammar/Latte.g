@@ -37,6 +37,7 @@ tokens {
   PARAMS;
   REF;
   EXPR;
+  NUM_NEGATION;
 }
 
 @header {
@@ -55,6 +56,12 @@ tokens {
 @members {
   Map<String, CommonTree> functionDefinitions = new HashMap<String, CommonTree>();
   Map<String, List<Param> > functionParameters = new HashMap<String, List<Param>>();
+  SymbolTable symbolTable = new SymbolTable();
+  
+ 	public LatteParser(TokenStream stream, SymbolTable symbolTable){
+			this(stream);
+			this.symbolTable = symbolTable;
+	}
 }
 
 program
@@ -71,6 +78,7 @@ function_definition
 	finally {
 	  functionDefinitions.put($fname.text, $function_definition.tree);
 	  functionParameters.put($fname.text, $arg.result); //hasmap of hashmap
+	  symbolTable.getGlobalScope().define(new MethodSymbol($fname.text,null,null));
 	}
 	
 arguments_list returns [List<Param> result]
@@ -195,9 +203,12 @@ readInt
 	;
 	
 //-----EXPRESSIONS-----
-
 expression
-	: logical_expression_or -> ^(EXPR logical_expression_or)
+	: expr -> ^(EXPR expr)
+	;
+	
+expr
+	: logical_expression_or
 	;
 
 logical_expression_or
@@ -225,11 +236,12 @@ multiplicative_expression
 	;
 	
 unary_expression
-	: (PLUS! | negation )* suffix_expression 
+	: (PLUS! | negation^ )* suffix_expression 
 	;
 	
 negation
-	: '!'|MINUS -> NEGATION
+	: '!' -> NEGATION
+	| MINUS -> NUM_NEGATION
 	;
 	
 suffix_expression
@@ -254,7 +266,7 @@ array_call
 basic_expression
 	:	ident
 	|	literal
-	| '('! expression ')'!
+	| '('! expr ')'!
 	;
 	
 literal

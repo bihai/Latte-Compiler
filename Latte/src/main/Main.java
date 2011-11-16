@@ -41,28 +41,31 @@ public class Main {
 		inputBase+="\\core0";
 		//String inputBase = "D:\\Projects\\ANTLR\\lattests\\good\\core0";
 		String ending =	".lat";
-		for(int i = 1; i<=22; i++){
+		for(int i = 1; i<=1; i++){
 			fileName=inputBase;
 			if(i<10)
 				fileName+="0";
 			fileName+=i+ending;
-			System.out.println(fileName);
-			input = new FileInputStream(fileName);
-			//Lexer Parser init 
-			LatteLexer lexer = new LatteLexer(new ANTLRInputStream(input));
-			TokenStream tokenStream = new CommonTokenStream(lexer);
-			LatteParser parser = new LatteParser(tokenStream);
-			parser.setTreeAdaptor(new LatteTreeAdaptor());
-			
-			program_return program = parser.program();
-			CommonTree tree = (CommonTree)program.getTree();
-			System.out.println(tree.toStringTree());
-			System.out.println("///////////////////////////////////");
-			SymbolTable symbolTable = new SymbolTable();
-			CommonTreeNodeStream stream = new CommonTreeNodeStream(new LatteTreeAdaptor(), tree);
-			DefSymbols sem = new DefSymbols(stream, symbolTable);
-			sem.downup(tree);
-			System.out.println(symbolTable);
+			try{
+				System.out.println(fileName);
+				input = new FileInputStream(fileName);
+				//Lexer Parser init 
+				SymbolTable symbolTable = new SymbolTable();
+				LatteLexer lexer = new LatteLexer(new ANTLRInputStream(input));
+				TokenStream tokenStream = new CommonTokenStream(lexer);
+				LatteParser parser = new LatteParser(tokenStream, symbolTable);
+				parser.setTreeAdaptor(new LatteTreeAdaptor());
+				
+				program_return program = parser.program();
+				CommonTree tree = (CommonTree)program.getTree();
+				System.out.println(tree.toStringTree());
+				System.out.println("///////////////////////////////////");
+				
+				CommonTreeNodeStream stream = new CommonTreeNodeStream(new LatteTreeAdaptor(), tree);
+				DefSymbols sem = new DefSymbols(stream, symbolTable);
+				sem.downup(tree);
+				System.out.println(symbolTable);
+			}catch(Exception e){System.out.println(e);};
 		}
 	}
 
