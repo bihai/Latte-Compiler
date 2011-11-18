@@ -16,4 +16,9 @@ public class GlobalScope extends StandardScope {
 	public Scope getParentScope() {
 		return null;
 	}
+
+	@Override
+	public Symbol resolveLocal(String name) {
+		return super.resolve(name);
+	}
 }

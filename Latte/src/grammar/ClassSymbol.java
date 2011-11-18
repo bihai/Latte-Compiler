@@ -27,4 +27,10 @@ public class ClassSymbol extends Symbol implements Type, Scope {
 		return null;
 	}
 
+	@Override
+	public Symbol resolveLocal(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

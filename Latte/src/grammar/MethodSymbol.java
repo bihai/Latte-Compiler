@@ -47,4 +47,9 @@ public class MethodSymbol extends Symbol implements Scope {
 		this.parentScope = parentScope;
 	}
 
+	@Override
+	public Symbol resolveLocal(String name) {
+		return symbols.get(name);
+	}
+
 }

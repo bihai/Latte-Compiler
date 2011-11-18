@@ -31,6 +31,11 @@ public class LocalScope extends StandardScope {
 	public String getName() {
 		return "Local Scope";
 	}
+
+	@Override
+	public Symbol resolveLocal(String name) {
+		return super.resolve(name);
+	}
 	
 	
 }

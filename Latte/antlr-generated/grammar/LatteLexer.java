@@ -1,4 +1,4 @@
-// $ANTLR 3.4 D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g 2011-11-16 14:57:41
+// $ANTLR 3.4 D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g 2011-11-18 12:24:27
 
   package grammar;
 
@@ -11,7 +11,6 @@ import java.util.ArrayList;
 @SuppressWarnings({"all", "warnings", "unchecked"})
 public class LatteLexer extends Lexer {
     public static final int EOF=-1;
-    public static final int T__48=48;
     public static final int T__49=49;
     public static final int T__50=50;
     public static final int T__51=51;
@@ -58,32 +57,33 @@ public class LatteLexer extends Lexer {
     public static final int ENDFOR=19;
     public static final int ENDIF=20;
     public static final int ENDWHILE=21;
-    public static final int ERROR=22;
-    public static final int EXPR=23;
-    public static final int FOR=24;
-    public static final int FUNC=25;
-    public static final int IF=26;
-    public static final int INTEGER=27;
-    public static final int MINUS=28;
-    public static final int MOD=29;
-    public static final int MULTILINE_COMMENT=30;
-    public static final int NAME=31;
-    public static final int NEGATION=32;
-    public static final int NUM_NEGATION=33;
-    public static final int PARAM=34;
-    public static final int PARAMS=35;
-    public static final int PLUS=36;
-    public static final int PRINTINT=37;
-    public static final int PROGRAM=38;
-    public static final int READINT=39;
-    public static final int REF=40;
-    public static final int RETURN=41;
-    public static final int SINGLE_TYPE=42;
-    public static final int STRING=43;
-    public static final int THEN=44;
-    public static final int TIMES=45;
-    public static final int WHILE=46;
-    public static final int WS=47;
+    public static final int EQ=22;
+    public static final int ERROR=23;
+    public static final int EXPR=24;
+    public static final int FOR=25;
+    public static final int FUNC=26;
+    public static final int IF=27;
+    public static final int INTEGER=28;
+    public static final int MINUS=29;
+    public static final int MOD=30;
+    public static final int MULTILINE_COMMENT=31;
+    public static final int NAME=32;
+    public static final int NEGATION=33;
+    public static final int NUM_NEGATION=34;
+    public static final int PARAM=35;
+    public static final int PARAMS=36;
+    public static final int PLUS=37;
+    public static final int PRINTINT=38;
+    public static final int PROGRAM=39;
+    public static final int READINT=40;
+    public static final int REF=41;
+    public static final int RETURN=42;
+    public static final int SINGLE_TYPE=43;
+    public static final int STRING=44;
+    public static final int THEN=45;
+    public static final int TIMES=46;
+    public static final int WHILE=47;
+    public static final int WS=48;
 
     // delegates
     // delegators
@@ -100,38 +100,15 @@ public class LatteLexer extends Lexer {
     }
     public String getGrammarFileName() { return "D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g"; }
 
-    // $ANTLR start "T__48"
-    public final void mT__48() throws RecognitionException {
-        try {
-            int _type = T__48;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:11:7: ( '!' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:11:9: '!'
-            {
-            match('!'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        	// do for sure before leaving
-        }
-    }
-    // $ANTLR end "T__48"
-
     // $ANTLR start "T__49"
     public final void mT__49() throws RecognitionException {
         try {
             int _type = T__49;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:12:7: ( '!=' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:12:9: '!='
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:11:7: ( '!' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:11:9: '!'
             {
-            match("!="); 
-
-
+            match('!'); 
 
             }
 
@@ -149,10 +126,10 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__50;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:13:7: ( '&&' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:13:9: '&&'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:12:7: ( '!=' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:12:9: '!='
             {
-            match("&&"); 
+            match("!="); 
 
 
 
@@ -172,10 +149,12 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__51;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:14:7: ( '(' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:14:9: '('
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:13:7: ( '&&' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:13:9: '&&'
             {
-            match('('); 
+            match("&&"); 
+
+
 
             }
 
@@ -193,10 +172,10 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__52;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:15:7: ( ')' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:15:9: ')'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:14:7: ( '(' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:14:9: '('
             {
-            match(')'); 
+            match('('); 
 
             }
 
@@ -214,12 +193,10 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__53;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:16:7: ( '++' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:16:9: '++'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:15:7: ( ')' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:15:9: ')'
             {
-            match("++"); 
-
-
+            match(')'); 
 
             }
 
@@ -237,10 +214,12 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__54;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:17:7: ( ',' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:17:9: ','
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:16:7: ( '++' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:16:9: '++'
             {
-            match(','); 
+            match("++"); 
+
+
 
             }
 
@@ -258,12 +237,10 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__55;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:18:7: ( '--' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:18:9: '--'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:17:7: ( ',' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:17:9: ','
             {
-            match("--"); 
-
-
+            match(','); 
 
             }
 
@@ -281,10 +258,12 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__56;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:19:7: ( ';' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:19:9: ';'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:18:7: ( '--' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:18:9: '--'
             {
-            match(';'); 
+            match("--"); 
+
+
 
             }
 
@@ -302,10 +281,10 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__57;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:20:7: ( '<' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:20:9: '<'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:19:7: ( ';' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:19:9: ';'
             {
-            match('<'); 
+            match(';'); 
 
             }
 
@@ -323,12 +302,10 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__58;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:21:7: ( '<=' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:21:9: '<='
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:20:7: ( '<' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:20:9: '<'
             {
-            match("<="); 
-
-
+            match('<'); 
 
             }
 
@@ -346,10 +323,12 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__59;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:22:7: ( '=' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:22:9: '='
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:21:7: ( '<=' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:21:9: '<='
             {
-            match('='); 
+            match("<="); 
+
+
 
             }
 
@@ -367,8 +346,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__60;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:23:7: ( '==' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:23:9: '=='
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:22:7: ( '==' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:22:9: '=='
             {
             match("=="); 
 
@@ -390,8 +369,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:24:7: ( '>' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:24:9: '>'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:23:7: ( '>' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:23:9: '>'
             {
             match('>'); 
 
@@ -411,8 +390,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:25:7: ( '>=' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:25:9: '>='
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:24:7: ( '>=' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:24:9: '>='
             {
             match(">="); 
 
@@ -434,8 +413,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:26:7: ( '[' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:26:9: '['
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:25:7: ( '[' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:25:9: '['
             {
             match('['); 
 
@@ -455,8 +434,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:27:7: ( ']' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:27:9: ']'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:26:7: ( ']' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:26:9: ']'
             {
             match(']'); 
 
@@ -476,8 +455,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:28:7: ( 'boolean[]' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:28:9: 'boolean[]'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:27:7: ( 'boolean[]' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:27:9: 'boolean[]'
             {
             match("boolean[]"); 
 
@@ -499,8 +478,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:29:7: ( 'else' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:29:9: 'else'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:28:7: ( 'else' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:28:9: 'else'
             {
             match("else"); 
 
@@ -522,8 +501,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:30:7: ( 'error' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:30:9: 'error'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:29:7: ( 'error' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:29:9: 'error'
             {
             match("error"); 
 
@@ -545,8 +524,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:31:7: ( 'if' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:31:9: 'if'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:30:7: ( 'if' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:30:9: 'if'
             {
             match("if"); 
 
@@ -568,8 +547,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:32:7: ( 'int[]' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:32:9: 'int[]'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:31:7: ( 'int[]' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:31:9: 'int[]'
             {
             match("int[]"); 
 
@@ -591,8 +570,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:33:7: ( 'printInt' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:33:9: 'printInt'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:32:7: ( 'printInt' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:32:9: 'printInt'
             {
             match("printInt"); 
 
@@ -614,8 +593,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:34:7: ( 'readInt' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:34:9: 'readInt'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:33:7: ( 'readInt' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:33:9: 'readInt'
             {
             match("readInt"); 
 
@@ -637,8 +616,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:35:7: ( 'return' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:35:9: 'return'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:34:7: ( 'return' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:34:9: 'return'
             {
             match("return"); 
 
@@ -660,8 +639,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:36:7: ( 'while' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:36:9: 'while'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:35:7: ( 'while' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:35:9: 'while'
             {
             match("while"); 
 
@@ -683,8 +662,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:37:7: ( '{' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:37:9: '{'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:36:7: ( '{' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:36:9: '{'
             {
             match('{'); 
 
@@ -704,8 +683,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:38:7: ( '||' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:38:9: '||'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:37:7: ( '||' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:37:9: '||'
             {
             match("||"); 
 
@@ -727,8 +706,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:39:7: ( '}' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:39:9: '}'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:38:7: ( '}' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:38:9: '}'
             {
             match('}'); 
 
@@ -748,8 +727,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:287:5: ( '+' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:287:7: '+'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:301:5: ( '+' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:301:7: '+'
             {
             match('+'); 
 
@@ -769,8 +748,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:288:6: ( '-' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:288:8: '-'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:302:6: ( '-' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:302:8: '-'
             {
             match('-'); 
 
@@ -790,8 +769,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = TIMES;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:289:6: ( '*' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:289:8: '*'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:303:6: ( '*' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:303:8: '*'
             {
             match('*'); 
 
@@ -811,8 +790,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = DIV;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:290:4: ( '/' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:290:6: '/'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:304:4: ( '/' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:304:6: '/'
             {
             match('/'); 
 
@@ -832,8 +811,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = MOD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:291:4: ( '%' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:291:6: '%'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:305:4: ( '%' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:305:6: '%'
             {
             match('%'); 
 
@@ -848,15 +827,36 @@ public class LatteLexer extends Lexer {
     }
     // $ANTLR end "MOD"
 
+    // $ANTLR start "EQ"
+    public final void mEQ() throws RecognitionException {
+        try {
+            int _type = EQ;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:306:3: ( '=' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:306:5: '='
+            {
+            match('='); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        	// do for sure before leaving
+        }
+    }
+    // $ANTLR end "EQ"
+
     // $ANTLR start "INTEGER"
     public final void mINTEGER() throws RecognitionException {
         try {
             int _type = INTEGER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:292:9: ( ( '0' .. '9' )+ )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:292:11: ( '0' .. '9' )+
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:307:9: ( ( '0' .. '9' )+ )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:307:11: ( '0' .. '9' )+
             {
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:292:11: ( '0' .. '9' )+
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:307:11: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -911,10 +911,10 @@ public class LatteLexer extends Lexer {
         try {
             int _type = BOOLEAN;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:294:8: ( ( 'true' | 'false' ) )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:294:10: ( 'true' | 'false' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:309:8: ( ( 'true' | 'false' ) )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:309:10: ( 'true' | 'false' )
             {
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:294:10: ( 'true' | 'false' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:309:10: ( 'true' | 'false' )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -933,7 +933,7 @@ public class LatteLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:294:11: 'true'
+                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:309:11: 'true'
                     {
                     match("true"); 
 
@@ -942,7 +942,7 @@ public class LatteLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:294:20: 'false'
+                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:309:20: 'false'
                     {
                     match("false"); 
 
@@ -970,10 +970,10 @@ public class LatteLexer extends Lexer {
         try {
             int _type = SINGLE_TYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:295:12: ( ( 'int' | 'boolean' | 'void' | 'string' ) )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:295:14: ( 'int' | 'boolean' | 'void' | 'string' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:310:12: ( ( 'int' | 'boolean' | 'void' | 'string' ) )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:310:14: ( 'int' | 'boolean' | 'void' | 'string' )
             {
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:295:14: ( 'int' | 'boolean' | 'void' | 'string' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:310:14: ( 'int' | 'boolean' | 'void' | 'string' )
             int alt3=4;
             switch ( input.LA(1) ) {
             case 'i':
@@ -1006,7 +1006,7 @@ public class LatteLexer extends Lexer {
 
             switch (alt3) {
                 case 1 :
-                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:295:15: 'int'
+                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:310:15: 'int'
                     {
                     match("int"); 
 
@@ -1015,7 +1015,7 @@ public class LatteLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:295:23: 'boolean'
+                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:310:23: 'boolean'
                     {
                     match("boolean"); 
 
@@ -1024,7 +1024,7 @@ public class LatteLexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:295:35: 'void'
+                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:310:35: 'void'
                     {
                     match("void"); 
 
@@ -1033,7 +1033,7 @@ public class LatteLexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:295:44: 'string'
+                    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:310:44: 'string'
                     {
                     match("string"); 
 
@@ -1061,8 +1061,8 @@ public class LatteLexer extends Lexer {
         try {
             int _type = NAME;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:296:6: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:296:8: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:311:6: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:311:8: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             {
             if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
                 input.consume();
@@ -1074,7 +1074,7 @@ public class LatteLexer extends Lexer {
             }
 
 
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:296:29: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:311:29: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
             loop4:
             do {
                 int alt4=2;
@@ -1124,10 +1124,10 @@ public class LatteLexer extends Lexer {
         try {
             int _type = WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:297:3: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:297:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:312:3: ( ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+ )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:312:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
             {
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:297:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:312:5: ( ' ' | '\\t' | '\\n' | '\\r' | '\\f' )+
             int cnt5=0;
             loop5:
             do {
@@ -1184,14 +1184,14 @@ public class LatteLexer extends Lexer {
         try {
             int _type = COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:298:8: ( '//' ( . )* ( '\\n' | '\\r' ) )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:298:10: '//' ( . )* ( '\\n' | '\\r' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:313:8: ( '//' ( . )* ( '\\n' | '\\r' ) )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:313:10: '//' ( . )* ( '\\n' | '\\r' )
             {
             match("//"); 
 
 
 
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:298:15: ( . )*
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:313:15: ( . )*
             loop6:
             do {
                 int alt6=2;
@@ -1207,7 +1207,7 @@ public class LatteLexer extends Lexer {
 
                 switch (alt6) {
             	case 1 :
-            	    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:298:15: .
+            	    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:313:15: .
             	    {
             	    matchAny(); 
 
@@ -1248,14 +1248,14 @@ public class LatteLexer extends Lexer {
         try {
             int _type = MULTILINE_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:299:18: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:299:20: '/*' ( options {greedy=false; } : . )* '*/'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:314:18: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:314:20: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
 
 
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:299:25: ( options {greedy=false; } : . )*
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:314:25: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -1280,7 +1280,7 @@ public class LatteLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:299:52: .
+            	    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:314:52: .
             	    {
             	    matchAny(); 
 
@@ -1315,12 +1315,12 @@ public class LatteLexer extends Lexer {
         try {
             int _type = STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:300:7: ( '\"' ( . )* '\"' )
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:300:9: '\"' ( . )* '\"'
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:315:7: ( '\"' ( . )* '\"' )
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:315:9: '\"' ( . )* '\"'
             {
             match('\"'); 
 
-            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:300:12: ( . )*
+            // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:315:12: ( . )*
             loop8:
             do {
                 int alt8=2;
@@ -1336,7 +1336,7 @@ public class LatteLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:300:13: .
+            	    // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:315:13: .
             	    {
             	    matchAny(); 
 
@@ -1363,284 +1363,284 @@ public class LatteLexer extends Lexer {
     // $ANTLR end "STRING"
 
     public void mTokens() throws RecognitionException {
-        // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:8: ( T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | PLUS | MINUS | TIMES | DIV | MOD | INTEGER | BOOLEAN | SINGLE_TYPE | NAME | WS | COMMENT | MULTILINE_COMMENT | STRING )
+        // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:8: ( T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | PLUS | MINUS | TIMES | DIV | MOD | EQ | INTEGER | BOOLEAN | SINGLE_TYPE | NAME | WS | COMMENT | MULTILINE_COMMENT | STRING )
         int alt9=42;
         alt9 = dfa9.predict(input);
         switch (alt9) {
             case 1 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:10: T__48
-                {
-                mT__48(); 
-
-
-                }
-                break;
-            case 2 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:16: T__49
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:10: T__49
                 {
                 mT__49(); 
 
 
                 }
                 break;
-            case 3 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:22: T__50
+            case 2 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:16: T__50
                 {
                 mT__50(); 
 
 
                 }
                 break;
-            case 4 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:28: T__51
+            case 3 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:22: T__51
                 {
                 mT__51(); 
 
 
                 }
                 break;
-            case 5 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:34: T__52
+            case 4 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:28: T__52
                 {
                 mT__52(); 
 
 
                 }
                 break;
-            case 6 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:40: T__53
+            case 5 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:34: T__53
                 {
                 mT__53(); 
 
 
                 }
                 break;
-            case 7 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:46: T__54
+            case 6 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:40: T__54
                 {
                 mT__54(); 
 
 
                 }
                 break;
-            case 8 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:52: T__55
+            case 7 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:46: T__55
                 {
                 mT__55(); 
 
 
                 }
                 break;
-            case 9 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:58: T__56
+            case 8 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:52: T__56
                 {
                 mT__56(); 
 
 
                 }
                 break;
-            case 10 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:64: T__57
+            case 9 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:58: T__57
                 {
                 mT__57(); 
 
 
                 }
                 break;
-            case 11 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:70: T__58
+            case 10 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:64: T__58
                 {
                 mT__58(); 
 
 
                 }
                 break;
-            case 12 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:76: T__59
+            case 11 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:70: T__59
                 {
                 mT__59(); 
 
 
                 }
                 break;
-            case 13 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:82: T__60
+            case 12 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:76: T__60
                 {
                 mT__60(); 
 
 
                 }
                 break;
-            case 14 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:88: T__61
+            case 13 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:82: T__61
                 {
                 mT__61(); 
 
 
                 }
                 break;
-            case 15 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:94: T__62
+            case 14 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:88: T__62
                 {
                 mT__62(); 
 
 
                 }
                 break;
-            case 16 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:100: T__63
+            case 15 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:94: T__63
                 {
                 mT__63(); 
 
 
                 }
                 break;
-            case 17 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:106: T__64
+            case 16 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:100: T__64
                 {
                 mT__64(); 
 
 
                 }
                 break;
-            case 18 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:112: T__65
+            case 17 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:106: T__65
                 {
                 mT__65(); 
 
 
                 }
                 break;
-            case 19 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:118: T__66
+            case 18 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:112: T__66
                 {
                 mT__66(); 
 
 
                 }
                 break;
-            case 20 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:124: T__67
+            case 19 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:118: T__67
                 {
                 mT__67(); 
 
 
                 }
                 break;
-            case 21 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:130: T__68
+            case 20 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:124: T__68
                 {
                 mT__68(); 
 
 
                 }
                 break;
-            case 22 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:136: T__69
+            case 21 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:130: T__69
                 {
                 mT__69(); 
 
 
                 }
                 break;
-            case 23 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:142: T__70
+            case 22 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:136: T__70
                 {
                 mT__70(); 
 
 
                 }
                 break;
-            case 24 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:148: T__71
+            case 23 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:142: T__71
                 {
                 mT__71(); 
 
 
                 }
                 break;
-            case 25 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:154: T__72
+            case 24 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:148: T__72
                 {
                 mT__72(); 
 
 
                 }
                 break;
-            case 26 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:160: T__73
+            case 25 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:154: T__73
                 {
                 mT__73(); 
 
 
                 }
                 break;
-            case 27 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:166: T__74
+            case 26 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:160: T__74
                 {
                 mT__74(); 
 
 
                 }
                 break;
-            case 28 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:172: T__75
+            case 27 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:166: T__75
                 {
                 mT__75(); 
 
 
                 }
                 break;
-            case 29 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:178: T__76
+            case 28 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:172: T__76
                 {
                 mT__76(); 
 
 
                 }
                 break;
-            case 30 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:184: PLUS
+            case 29 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:178: PLUS
                 {
                 mPLUS(); 
 
 
                 }
                 break;
-            case 31 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:189: MINUS
+            case 30 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:183: MINUS
                 {
                 mMINUS(); 
 
 
                 }
                 break;
-            case 32 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:195: TIMES
+            case 31 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:189: TIMES
                 {
                 mTIMES(); 
 
 
                 }
                 break;
-            case 33 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:201: DIV
+            case 32 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:195: DIV
                 {
                 mDIV(); 
 
 
                 }
                 break;
-            case 34 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:205: MOD
+            case 33 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:199: MOD
                 {
                 mMOD(); 
 
 
                 }
                 break;
+            case 34 :
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:203: EQ
+                {
+                mEQ(); 
+
+
+                }
+                break;
             case 35 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:209: INTEGER
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:206: INTEGER
                 {
                 mINTEGER(); 
 
@@ -1648,7 +1648,7 @@ public class LatteLexer extends Lexer {
                 }
                 break;
             case 36 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:217: BOOLEAN
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:214: BOOLEAN
                 {
                 mBOOLEAN(); 
 
@@ -1656,7 +1656,7 @@ public class LatteLexer extends Lexer {
                 }
                 break;
             case 37 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:225: SINGLE_TYPE
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:222: SINGLE_TYPE
                 {
                 mSINGLE_TYPE(); 
 
@@ -1664,7 +1664,7 @@ public class LatteLexer extends Lexer {
                 }
                 break;
             case 38 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:237: NAME
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:234: NAME
                 {
                 mNAME(); 
 
@@ -1672,7 +1672,7 @@ public class LatteLexer extends Lexer {
                 }
                 break;
             case 39 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:242: WS
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:239: WS
                 {
                 mWS(); 
 
@@ -1680,7 +1680,7 @@ public class LatteLexer extends Lexer {
                 }
                 break;
             case 40 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:245: COMMENT
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:242: COMMENT
                 {
                 mCOMMENT(); 
 
@@ -1688,7 +1688,7 @@ public class LatteLexer extends Lexer {
                 }
                 break;
             case 41 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:253: MULTILINE_COMMENT
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:250: MULTILINE_COMMENT
                 {
                 mMULTILINE_COMMENT(); 
 
@@ -1696,7 +1696,7 @@ public class LatteLexer extends Lexer {
                 }
                 break;
             case 42 :
-                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:271: STRING
+                // D:\\Projects\\git\\Latte\\Latte\\src\\grammar\\Latte.g:1:268: STRING
                 {
                 mSTRING(); 
 
@@ -1738,12 +1738,12 @@ public class LatteLexer extends Lexer {
         "\uffff\1\156\1\164\1\172\1\uffff\2\172\1\164\1\172\2\uffff\1\172"+
         "\2\uffff";
     static final String DFA9_acceptS =
-        "\2\uffff\1\3\1\4\1\5\1\uffff\1\7\1\uffff\1\11\3\uffff\1\20\1\21"+
-        "\6\uffff\1\33\1\34\1\35\1\40\1\uffff\1\42\1\43\4\uffff\1\46\1\47"+
-        "\1\52\1\2\1\1\1\6\1\36\1\10\1\37\1\13\1\12\1\15\1\14\1\17\1\16\10"+
-        "\uffff\1\50\1\51\1\41\7\uffff\1\25\14\uffff\1\26\1\45\11\uffff\1"+
-        "\23\5\uffff\1\44\3\uffff\1\24\3\uffff\1\32\4\uffff\1\31\1\22\1\uffff"+
-        "\1\30\1\27";
+        "\2\uffff\1\3\1\4\1\5\1\uffff\1\7\1\uffff\1\11\3\uffff\1\17\1\20"+
+        "\6\uffff\1\32\1\33\1\34\1\37\1\uffff\1\41\1\43\4\uffff\1\46\1\47"+
+        "\1\52\1\2\1\1\1\6\1\35\1\10\1\36\1\13\1\12\1\14\1\42\1\16\1\15\10"+
+        "\uffff\1\50\1\51\1\40\7\uffff\1\24\14\uffff\1\25\1\45\11\uffff\1"+
+        "\22\5\uffff\1\44\3\uffff\1\23\3\uffff\1\31\4\uffff\1\30\1\21\1\uffff"+
+        "\1\27\1\26";
     static final String DFA9_specialS =
         "\160\uffff}>";
     static final String[] DFA9_transitionS = {
@@ -1895,7 +1895,7 @@ public class LatteLexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__48 | T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | PLUS | MINUS | TIMES | DIV | MOD | INTEGER | BOOLEAN | SINGLE_TYPE | NAME | WS | COMMENT | MULTILINE_COMMENT | STRING );";
+            return "1:1: Tokens : ( T__49 | T__50 | T__51 | T__52 | T__53 | T__54 | T__55 | T__56 | T__57 | T__58 | T__59 | T__60 | T__61 | T__62 | T__63 | T__64 | T__65 | T__66 | T__67 | T__68 | T__69 | T__70 | T__71 | T__72 | T__73 | T__74 | T__75 | T__76 | PLUS | MINUS | TIMES | DIV | MOD | EQ | INTEGER | BOOLEAN | SINGLE_TYPE | NAME | WS | COMMENT | MULTILINE_COMMENT | STRING );";
         }
     }
  

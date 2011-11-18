@@ -38,15 +38,19 @@ tokens {
   REF;
   EXPR;
   NUM_NEGATION;
+  EQ;
 }
 
 @header {
   package grammar;
   import java.util.Map;
-  import java.util.HashMap;
+  import java.util.LinkedHashMap;
   import java.util.List;
   import java.util.ArrayList;
   import grammar.Param;
+  import grammar.VariableSymbol;
+  import grammar.Symbol;
+  import main.NameAlreadyUsedException;
 }
 
 @lexer::header {
@@ -54,13 +58,18 @@ tokens {
 }
 
 @members {
-  Map<String, CommonTree> functionDefinitions = new HashMap<String, CommonTree>();
-  Map<String, List<Param> > functionParameters = new HashMap<String, List<Param>>();
+  Map<String, CommonTree> functionDefinitions = new LinkedHashMap<String, CommonTree>();
+  Map<String, ArrayList<Symbol> > functionParameters;
   SymbolTable symbolTable = new SymbolTable();
   
- 	public LatteParser(TokenStream stream, SymbolTable symbolTable){
+ 	public LatteParser(TokenStream stream, SymbolTable symbolTable, Map<String,ArrayList<Symbol>> functionParameters){
 			this(stream);
 			this.symbolTable = symbolTable;
+			this.functionParameters = functionParameters;
+	}
+	
+	public Map<String, ArrayList<Symbol>> getfunctionParameters(){
+		return functionParameters;
 	}
 }
 
@@ -78,18 +87,24 @@ function_definition
 	finally {
 	  functionDefinitions.put($fname.text, $function_definition.tree);
 	  functionParameters.put($fname.text, $arg.result); //hasmap of hashmap
-	  symbolTable.getGlobalScope().define(new MethodSymbol($fname.text,null,null));
+	  if(symbolTable.getGlobalScope().resolveLocal($fname.text) != null)
+      	throw new NameAlreadyUsedException($fname.text, $fname.getLine());
+     symbolTable.getGlobalScope().define(new MethodSymbol($fname.text,null,null));
+	  
 	}
 	
-arguments_list returns [List<Param> result]
+arguments_list returns [ArrayList<Symbol> result]
   :	
-  {$result = new ArrayList<Param>();}
+  {$result = new ArrayList<Symbol>();}
   p1=param {$result.add($p1.result);} (',' p2=param {$result.add($p2.result);})*
   -> ^(PARAMS param+)
   ;
 
-param returns [Param result]
-	:	type NAME {$result = new Param($type.text, $NAME.text);} -> ^(PARAM type NAME)
+param returns [VariableSymbol result]
+	:	type NAME {
+		$result = new VariableSymbol($type.text, (Type) symbolTable.getGlobalScope().resolve($NAME.text));
+		
+	} -> ^(PARAM type NAME)
 	;
 	
 type
@@ -136,7 +151,7 @@ single_declarator_list[LatteTree typeTree]
    ;
 
 single_declarator[LatteTree typeTree]
-   :	NAME '=' expression  -> ^(DEFINE NAME {$typeTree} expression) 
+   :	NAME EQ expression  -> ^(DEFINE NAME {$typeTree} expression) 
    |	NAME -> ^(DEFINE NAME {$typeTree})
    ;
    
@@ -145,9 +160,9 @@ assignment_statement
    ;
    
 assignment
-   :	ident '='^ expression
-   |	ident '++' -> ^('=' ident ^(PLUS ident INTEGER["1"]))
-   |	ident '--' -> ^('=' ident ^(MINUS ident INTEGER["1"]))
+   :	ident '=' expression -> ^(EQ ident expression)
+   |	ident '++' -> ^(EQ ident ^(PLUS ident INTEGER["1"]))
+   |	ident '--' -> ^(EQ ident ^(MINUS ident INTEGER["1"]))
    ;
    
 if_statement
@@ -166,7 +181,7 @@ loop_statement
    ;
    
 return_statement
-   :	'return' (expression)? ';' -> ^(RETURN expression?)
+   :	'return' expression? ';' -> ^(RETURN expression?)
    ;
    
 expression_statement
@@ -187,7 +202,7 @@ predefined_function
 	;
 	
 printInt
-	:	'printInt' '(' expression ')' -> ^(PRINTINT expression)
+	:	'printInt' '(' expression ')' -> ^(CALL NAME["printInt"] ^(ARG expression))
 	;
 	
 //printString
@@ -274,7 +289,6 @@ literal
 	| BOOLEAN
 	| STRING
 	;
-	
 integer_literal
 	:	INTEGER
 	;	
@@ -289,6 +303,7 @@ MINUS: '-';
 TIMES: '*';
 DIV: '/';
 MOD: '%';
+EQ: '=';
 INTEGER : '0'..'9'+;
 //INTEGER : ('0' | ('-')?('1'..'9')('0'..'9')*);
 BOOLEAN: ('true' | 'false');
